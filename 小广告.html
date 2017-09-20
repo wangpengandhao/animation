@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jianrong.js"></script>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 100px;
+		height: 150px;
+		background: skyblue;
+		position: absolute;
+		top: 0;
+		font-size: 20px;
+		color: red;
+		text-align: center;
+	}
+</style>
+<body>
+	<div class="box">小广告</div>
+</body>
+<script>
+	window.onload=function(){
+		// let box = $('.box')[0];
+		// let maxY=window.innerHeight-box.offsetHeight;
+		
+		// let t=setInterval(move,60);
+		// let speed=10;
+		// function move(){			
+		// 	let tops =box.offsetTop+speed;
+		// 	if(tops>=maxY){
+		// 		tops=maxY;
+		// 		speed*=-1;
+		// 	}
+		// 	if(tops<=0){
+		// 		tops=0;
+		// 		speed*=-1;
+		// 	}
+		// 	// console.log(box.offsetTop)
+		// 	box.style.top=tops+'px';
+		// }
+		// let box = $('.box')[0];
+		// let maxX=window.innerWidth-box.offsetWidth;
+		// console.log(maxX);
+		// let t=setInterval(movel,60);
+		// let speed=10;
+		// function movel(){
+		// 	let	lefts=box.offsetLeft+speed;
+			
+		// 	if(lefts>=maxX){
+		// 		lefts=maxX;
+		// 		speed*=-1;
+		// 	}
+		// 	if(lefts<=0){
+		// 		lefts=0;
+		// 		speed*=-1;
+		// 	}
+		// 	box.style.left=lefts+'px';
+		// }
+		let box = $('.box')[0];
+		let maxY=window.innerHeight-box.offsetHeight;
+		let maxX=window.innerWidth-box.offsetWidth;
+		let t=setInterval(move,60);
+		let x=10;
+		let y=10;
+		function move(){			
+			let tops =box.offsetTop+x;
+			let	lefts=box.offsetLeft+y;
+			if(tops>=maxY){
+				tops=maxY;
+				x*=-1;
+			}
+			if(lefts>=maxX){
+				lefts=maxX;
+				y*=-1;
+			}
+			if(tops<=0){
+				tops=0;
+				x*=-1;
+			}
+			if(lefts<=0){
+				lefts=0;
+				y*=-1;
+			}
+			// console.log(box.offsetTop)
+			box.style.top=tops+'px';
+			box.style.left=lefts+'px';
+		}
+	}
+</script>
+</html>

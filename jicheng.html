@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// class person{
+		//   constructor(){
+		//   this.name='zhangsan'
+		// }
+		// }
+		// class student extents person{
+		//   constructor(){
+		//   super();
+
+		// }
+		// }
+		function person(){
+
+		}
+		function student(){
+			this.name='zhangsan';
+			this.study=function(){
+				
+			}
+		}
+		let zhangsan= new person;
+		let lisi= new student;
+		zhangsan.say()
+		// 冒充  call   apply  参数
+		zhangsan.say.call(lisi,3,4);
+		zhangsan.say.apply(lisi,[5,6]);
+	</script>
+</body>
+</html>
